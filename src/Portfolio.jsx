@@ -679,11 +679,13 @@ function ContactSection({ contactRef, contactIn }) {
 
 // ── Component: Footer ────────────────────────────────────────
 function Footer() {
+  const now=new Date();
+  const month = now.toLocaleString("default", { month: "long" });
   return (
     <footer className="portfolio-footer">
       <div className="footer-inner">
         <span className="footer-name">Rachid El Mekkaouy</span>
-        <span className="footer-copy">© 2025 — Built with React ⚛</span>
+        <span className="footer-copy">© 2026 — {month}⚛</span>
         <span className="footer-role">Full Stack Developer</span>
       </div>
     </footer>
