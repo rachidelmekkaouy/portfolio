@@ -1159,14 +1159,10 @@ body {
   .desktop-nav   { display: none !important; }
   .hamburger     { display: flex !important; }
   .contact-card  { padding: 28px 22px; }
-  .hero-stats    { gap: 24px; }
-  .avatar-wrapper { width: 200px; height: 200px; }
-  .avatar-circle  { font-size: 4rem; }
+  .hero-stats    { gap: 20px; }
 
   /* Tighter navbar padding on mobile so nothing overflows */
-  .portfolio-nav {
-    padding: 0 16px;
-  }
+  .portfolio-nav { padding: 0 16px; }
 
   /* Shrink logo slightly on very small screens */
   .nav-logo { font-size: 1.1rem; }
@@ -1177,6 +1173,26 @@ body {
     height: 32px;
     font-size: 0.9rem;
   }
+
+  /* Hero: hide the avatar column on mobile — text takes full width */
+  .hero-avatar-col { display: none !important; }
+
+  /* Hero section: reduce top padding on mobile */
+  .hero-section {
+    padding-top: 90px;
+    padding-bottom: 60px;
+    min-height: auto;
+  }
+
+  /* Make hero name slightly smaller on small phones */
+  .hero-name { font-size: clamp(2.4rem, 11vw, 3.5rem); }
+
+  /* Stats row: smaller gap on mobile */
+  .hero-stat-number { font-size: 1.4rem; }
+
+  /* About visual: smaller on mobile */
+  .about-visual { max-width: 260px; aspect-ratio: 1/1; }
+  .about-emoji  { font-size: 4rem; }
 
   /* Stack contact links vertically on small screens */
   .contact-links-row { flex-direction: column; align-items: center; gap: 16px; }
@@ -1189,6 +1205,23 @@ body {
   .contact-section {
     overflow-x: hidden;
   }
+
+  /* Section padding tighter on mobile */
+  .about-section,
+  .skills-section,
+  .projects-section,
+  .contact-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 400px) {
+  /* Extra small phones */
+  .hero-name    { font-size: 2.2rem; }
+  .hero-subtitle { font-size: 0.95rem; }
+  .btn-primary-custom,
+  .btn-outline-custom { padding: 11px 24px; font-size: 0.88rem; }
 }
 
 @media (min-width: 769px) {

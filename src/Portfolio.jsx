@@ -277,8 +277,8 @@ function HeroSection({ heroRef, heroIn }) {
             </div>
           </div>
 
-          {/* ── Right column: animated avatar ── */}
-          <div className="col-12 col-lg-5 d-flex justify-content-center">
+          {/* ── Right column: animated avatar — hidden on mobile ── */}
+          <div className="col-12 col-lg-5 d-flex justify-content-center hero-avatar-col">
             <div className="avatar-wrapper">
               {/* Rotating dashed rings — pure CSS animation */}
               <div className="avatar-ring-2" />
@@ -679,15 +679,11 @@ function ContactSection({ contactRef, contactIn }) {
 
 // ── Component: Footer ────────────────────────────────────────
 function Footer() {
-  const now = new Date();
-  const year = now.getFullYear();
-  const day = now.getDate();                                          // e.g. 28
-  const month = now.toLocaleString("default", { month: "long" }); 
   return (
     <footer className="portfolio-footer">
       <div className="footer-inner">
         <span className="footer-name">Rachid El Mekkaouy</span>
-        <span className="footer-copy">© {year} - {month} - {day}</span>
+        <span className="footer-copy">© 2025 — Built with React ⚛</span>
         <span className="footer-role">Full Stack Developer</span>
       </div>
     </footer>
